@@ -39,3 +39,13 @@ if [[ "$install_LibreOffice" == true ]]; then
     fi
     echo "LibreOffice installation successful"
 fi
+
+if [[ "$install_okular" == true ]]; then
+    if command -v okular &>/dev/null; then
+        echo "Okular is already install"
+    else
+        echo "Installing Okular..."
+        sudo $distro install -y okular
+    fi
+    echo "Okular installation successful"
+fi
