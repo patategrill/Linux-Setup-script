@@ -24,6 +24,7 @@
 - Chromium 🌐
 - LibreOffice 
 - Obsidian 🟣
+- Okular (like Adobe acrobat)
 
 ### This tool is available on Debian, Ubuntu, Mint, Pop!_OS andFedora  
 
