@@ -1,29 +1,27 @@
-# Linux-setup-script to automate the installation of multiple programs
-
-## Programs </> : 
+## Linux-setup-script to automate the installation of multiple programs
 
 ### Dev script :  
-- Spotify 🟢ᯤ
-- Chromium 🌐
-- Git 🟠
+- Spotify 
+- Chromium 
+- Git 
 - Vscode (and extension)
-- Python3 🐍
-- NodeJS 🟢
+- Python3 
+- NodeJS
 
 ### CTF script :  
-- Spotify 🟢ᯤ
-- Chromium 🌐
-- Ghidra 🐉
-- Wordlist 📙
-- Wireshark 🦈
+- Spotify
+- Chromium
+- Ghidra
+- Wordlist
+- Wireshark
 - SqlMap 
 - Nmap
 
 ### Office Software script :  
-- Spotify 🟢ᯤ
-- Chromium 🌐
+- Spotify
+- Chromium
 - LibreOffice 
-- Obsidian 🟣
+- Obsidian
 - Okular (like Adobe acrobat)
 
 ### This tool is available on Debian, Ubuntu, Mint, Pop!_OS andFedora  
