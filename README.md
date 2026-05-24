@@ -24,7 +24,7 @@
 - Obsidian
 - Okular (like Adobe acrobat)
 
-### This tool is available on Debian, Ubuntu, Mint, Pop!_OS andFedora  
+### This tool is available on Debian, Ubuntu, Mint, Pop!_OS and Fedora  
 
 This program require an internet connection  
 #### You must update your systeme before installation with the command :  
