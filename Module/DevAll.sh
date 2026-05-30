@@ -103,7 +103,7 @@ then
         echo "NodeJS is already install"
     else
         echo "NodeJS is missing"
-        read -p "Do you want to install it ? [yes or non] :" choice
+        read -p "Do you want to install it ? [yes or no] :" choice
         if [[ "$choice" == "yes" ]];
         then
         echo "Installing NodeJS..."
