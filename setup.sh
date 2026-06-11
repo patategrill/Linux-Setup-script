@@ -3,19 +3,27 @@
 
 if command -v apt &> /dev/null;
 then
-    distro="apt"
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
 elif command -v dnf &> /dev/null;
 then
-    distro="dnf"
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
 elif command -v pacman &> /dev/null;
 then
-    distro="pacman"
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
 elif command -v apk &> /dev/null;
 then
-    distro="apk"
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
 else
     echo "Unsupported Linux distribution. Please install packages manually."
@@ -39,26 +47,19 @@ then
     read choice2
     if [[ "$choice2" == "1" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
         echo "Installing Minimal Dev configuration..."
         source Module/DevMinimal.sh
     elif [[ "$choice2" == "2" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+
         echo "Installing All Dev configuration..."
         source Module/DevAll.sh
     elif [[ "$choice2" == "3" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
         echo "Installing Web Dev configuration..."
         source Module/DevWeb.sh
     elif [[ "$choice2" == "4" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
         echo "Installing Game Dev configuration..."
         source Module/DevGame.sh
     else
@@ -72,14 +73,10 @@ then
     read choice2  
     if [[ "$choice2" = "1" ]];
     then  
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
         echo "Installing Minimal CTF configuration..."
         source Module/CTFMinimal.sh
     elif [[ "$choice2" == "2" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
         echo "Installing All CTF configuration..."
         source Module/CTFAll.sh
     else
@@ -93,14 +90,10 @@ then
     read choice2
     if [[ "$choice2" == "1" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOffice.conf
         echo "Installing Minimal Office Software configuration..."
         source Module/OfficeSoftwareMinimal.sh
     elif [[ "$choice2" == "2" ]];
     then
-        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
-        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOffice.conf
         echo "Installing All Office Software configuration..."
         source Module/OfficeSoftwareAll.sh
     else
