@@ -3,18 +3,28 @@
 
 if command -v apt &> /dev/null;
 then
+    distro="apt"
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
 elif command -v dnf &> /dev/null;
 then
+    distro="dnf"
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
-elif command -v pacman &> /dev/null;
+elif command -v zypper &> /dev/null;
 then
+    distro="zypper"
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
+    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
+
+elif command -v apk &> /dev/null;
+then
+    distro="apk"
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
