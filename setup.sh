@@ -19,12 +19,6 @@ then
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
     sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
 
-elif command -v apk &> /dev/null;
-then
-    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
-    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configCTF.conf
-    sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configOfficeSoftware.conf
-
 else
     echo "Unsupported Linux distribution. Please install packages manually."
     exit
