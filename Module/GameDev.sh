@@ -84,3 +84,14 @@ then
     fi
     echo "Unity Hub installation successful"
 fi
+
+if [[ "$install_git" == true ]]; then
+    
+    if command -v git &> /dev/null; then
+        echo "Git is already install"
+    else
+        echo "Installing Git..."
+        sudo $distro install -y git
+    fi
+    echo "Git installation successful"
+fi
