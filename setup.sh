@@ -1,5 +1,28 @@
 #!/bin/bash
 
+
+if command -v apt &> /dev/null;
+then
+    distro="apt"
+
+elif command -v dnf &> /dev/null;
+then
+    distro="dnf"
+
+elif command -v pacman &> /dev/null;
+then
+    distro="pacman"
+
+elif command -v apk &> /dev/null;
+then
+    distro="apk"
+
+else
+    echo "Unsupported Linux distribution. Please install packages manually."
+    exit
+fi
+
+
 echo "Choose option :"
 echo "1) Dev"
 echo "2) CTF"
