@@ -11,6 +11,8 @@ then
     echo "Choose setup mode :"
     echo "1) Minimal"
     echo "2) All"
+    echo "3) Web Dev"
+    echo "4) Game Dev"
     read choice2
     if [[ "$choice2" == "1" ]];
     then
@@ -24,6 +26,18 @@ then
         sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
         echo "Installing All Dev configuration..."
         source Module/DevAll.sh
+    elif [[ "$choice2" == "3" ]];
+    then
+        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
+        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+        echo "Installing Web Dev configuration..."
+        source Module/DevWeb.sh
+    elif [[ "$choice2" == "4" ]];
+    then
+        read -p "What is your linux distribution ? (For Ubuntu,Debian,Mint,Pop!_OS write 'apt' For Fedora write 'dnf') " distro 
+        sed -i "s/distro=\"\"/distro=\"$distro\"/g" config/configDev.conf
+        echo "Installing Game Dev configuration..."
+        source Module/DevGame.sh
     else
         echo "Invalid input"
     fi
