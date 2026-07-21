@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../Config/configCTF.conf
+source config/configCTF.conf
 
 #Spotify
 if [[ "$install_spotify" == true ]];
