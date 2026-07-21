@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../Config/configOfficeSoftware.conf
+source config/configOfficeSoftware.conf
 
 #Spotify
 if [[ "$install_spotify" == true ]];
