@@ -47,6 +47,9 @@ On Fedora :
 
     sudo dnf upgrade -y
 
+### You must give to setup.sh the rights of execution in terminal with :
+
+    chmod +x setup.sh
 
 It can be launched in terminal with :
 
