@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../Config/configDev.conf
+source config/configDev.conf
 
 #Spotify
 if [[ "$install_spotify" == true ]];
