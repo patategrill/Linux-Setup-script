@@ -1,4 +1,4 @@
-## Linux-setup-script to automate the installation of multiple programs
+## EIL(Easy Installation script for Linux) to automate the installation of multiple programs
 
 ### Dev script :  
 - Spotify 
